@@ -1,0 +1,107 @@
+.Meeting {
+	text-align: center;
+	margin: 30px 0;
+}
+
+.Meeting-intro {
+	border: 2px solid;
+	max-width: 600px;
+	margin: 30px auto;
+	background: white;
+	padding: 50px 0;
+	box-shadow: 6px 6px 0 0px rgb(200,200,200);
+   
+}
+.Meeting-unit {
+	background: #9C0F5F;
+    border-radius: 50px;
+    color: white;
+    display: inline-block;
+    padding: 3px 15px;
+    margin-bottom: 30px;
+}
+.Meeting-title {
+	font-size: 20px;
+	font-weight: 800;
+	line-height: 2;
+}
+
+.Meeting-speaker {
+	display: inline-block;
+	background: white;
+	border: 1px solid rgb(100,100,100);
+	padding: 2px 4px;
+	margin: 2px;
+	cursor: pointer;
+	position: relative;
+
+}
+.Meeting-speaker.is-inactive:hover:after {
+  position: absolute;
+  top: -4px;
+  left: -6px;
+  z-index: 10;
+  width: 50px;
+  height: 60px;
+  border: 8px solid #9C0F5F;
+  content: '';
+}
+.Meeting-speaker.is-active {
+  border: 8px solid #9C0F5F;
+
+  transition-property: all;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+.Meeting-task {
+	font-size: 20px;
+    margin-bottom: 40px;
+}
+.Meeting-highlight {
+	font-size: 22px;
+	font-weight: 800;
+}
+.Meeting-taskChoice {
+	border: 2px solid;
+	width: 50%;
+	max-width: 400px;
+	margin: 10px auto;
+	background: white;
+	font-size: 18px;
+	box-shadow: 2px 2px 0 0px rgb(200,200,200);
+    padding: 10px;
+    cursor: pointer;
+
+}
+.Meeting-taskChoice:hover {
+	border-color: #9C0F5F;
+	box-shadow: 2px 2px 0 0px rgb(180,180,180);
+}
+.Meeting-taskChoice.is-choosed {
+	border: 4px solid #9C0F5F;
+}
+/*
+.Meeting-speaker.is-KMT {
+  border: 1px solid #3288bd;
+  border-bottom:4px solid #3288bd;
+}
+.Meeting-speaker.is-DPP {
+  border: 1px solid #7fbc41;
+  border-bottom:4px solid #7fbc41;
+}
+.Meeting-speaker.is-PFP {
+  border: 1px solid orange;
+  border-bottom:4px solid orange;
+}
+.Meeting-speaker.is-TSU {
+  border: 1px solid #b35806;
+  border-bottom:4px solid #b35806;
+}
+.Meeting-speaker.is-NP {
+  border: 1px solid gray;
+  border-bottom:4px solid gray;
+}
+.Meeting-speaker.is-NPU {
+  border: 1px solid rgba(194,15,81,0.9);
+  border-bottom:4px solid rgba(194,15,81,0.9);
+}*/

@@ -1,25 +1,18 @@
 /** @jsx React.DOM */
 
 var React = require('react/addons');
-var Saying = require('../Saying/Saying.jsx');
-
-var data = require('../../data/result');
-
+var Meeting = require('../Meeting/Meeting.jsx');
+var data = require('../../data/byLegislators');
+console.log(data);
 
 require('./App.css');
 
 var App = React.createClass({
   
   render () {
-    var sayItems = data.sayings.map((item, key)=>{
-        item.key = key;
-        return (
-          <Saying key={key}
-                  data={item}/>
-        )
-    });
+    
     return (
-      <div>{sayItems}</div>
+      <div className="App"><Meeting data={data}/></div>
     );
   }
 });

@@ -2778,6 +2778,8 @@ function parse(){
       var test = "";
       var current_speaker = "";
       var current_speaker_party = "";
+      var is_chairman = false;
+      var is_legislator = false;
 
       var saying_count = 0;
       for(var i=0 ; i<discussion_part.length ; i++){
@@ -2793,6 +2795,8 @@ function parse(){
                       item.speaker = current_speaker;
                       item.speaker_party = current_speaker_party;
                       item.paragraph = discussion_part.substring(pre_colon+1,i);
+                      item.is_chairman = is_chairman;
+                      item.is_legislator = is_legislator;
                       
                       if(sayings.length > 0){
                           //Replace: if it's the second (or more) paraphagh of the same speaker's addressment.
@@ -2832,20 +2836,34 @@ function parse(){
                       current_speaker = discussion_part.substring(pre_linebreak+1,i);
 
                       var name = current_speaker;
-                      if(current_speaker==='主席')
-                         name = result.chairman;
+                      //console.log(current_speaker);
+
+                      if(current_speaker==='主席'||current_speaker===result.chairman){
+                        name = result.chairman;
+                        is_chairman = true;
+                      }else{
+                        is_chairman = false;
+                      }
+                         
 
                       name = name.replace("委員","");
                       
                       current_speaker_party = NameToParty[name] || "GOV";
+                      if(NameToParty[name]){
+                         is_legislator = true;
+                      }else{
+                         is_legislator = false;
+                      }
                       //console.log(name+" "+current_speaker_party);
                      
 
                   }
                   current_speaker = name;
-                  if(current_speaker==='主席')
-                      current_speaker += '（'+result.chairman+'）';
-                 
+                  // if(current_speaker==='尤美女' && is_chairman===false){
+                  //   console.log(current_speaker + ":"+ is_chairman);
+                  //   console.log(result.chairman);
+                  // }
+
 
 
                 pre_colon = i;
