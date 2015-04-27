@@ -1,0 +1,64 @@
+.Saying {
+    max-width: 600px;
+    margin: 0 auto;
+
+}
+.Saying-avatar {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid rgb(220,220,220);
+    border-radius: 50%;
+}
+.Saying-flex {
+    display: flex;
+    margin: 10px 0;
+}
+.Saying-flexLeft {
+    flex: 0 0 60px;
+    order: 1;
+    text-align: center;
+}
+.Saying-flexMain {
+    flex: 1;
+    border: 1px solid rgb(200,200,200);
+    border-radius: 8px;
+    order: 2;
+    margin-right: 60px;
+    margin-left: 0;
+    padding: 10px;
+    line-height: 1.6;
+    position: relative;
+
+}
+.Saying-flexMain:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 10px solid blue;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+}
+.Saying-flexMain:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 8px solid #000000;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
+.Saying-flexLeft.is-odd {
+    order: 2;
+}
+.Saying-flexMain.is-odd {
+    order: 1;
+    margin-right: 0;
+    margin-left: 60px;
+    background: rgb(240,240,240);
+}
+.Saying-flexMain.is-expanded {
+    height: auto;
+}
