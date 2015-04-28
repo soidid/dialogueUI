@@ -1,0 +1,107 @@
+.Tags {
+	margin-top: 20px;
+}
+.Tag {
+	max-width: 400px;
+	margin: 0 auto;
+	position: relative;
+}
+.Tag-title {
+	text-align: left;
+	padding-right: 40px;
+	position: relative;
+}
+.Tag-titleCount {
+   position: absolute;
+   right: 10px;
+   top: 0px;
+   height: 20px;
+   width: 20px;
+   border-radius: 50%;
+   font-size: 14px;
+   text-align: center;
+   vertical-align: top;
+}
+.Tag-main{
+  background: #cceef0;
+  border: #dcdcdc;
+  border-radius: 0 2px 2px 0;
+  color: #23bbce;
+  display: inline-block;
+  font-size: 20px;
+  height: 40px;
+  left: 0;
+  line-height: 40px;
+  margin: 4px;
+  padding: 0 10px 0 25px;
+  position: relative;
+  top: 0;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 0px rgb(240,240,240);
+}
+.Tag-main:hover {
+  box-shadow: 3px 3px 0 0px rgb(230,230,230);
+}
+.Tag-main:after{
+  background: white; /*// hole background*/
+  border: 2px #add solid; /*// hole border*/
+  border-radius: 50%;
+  content: '';
+  height: 6px;
+  left: 0;
+  position: absolute;
+  width: 6px;
+  top: 16px;
+}
+.Tag-main:before{
+  border-bottom: 20px transparent solid;
+  border-right: 12px #cceef0 solid;
+  border-top: 20px transparent solid;
+  content: '';
+  height: 0;
+  left: -12px;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+
+.Tag-event {
+	text-align: left;
+	border: 2px solid #cceef0;
+	background: white;
+	padding: 8px;
+	margin: 4px;
+	
+}
+.Tag-quote {
+	font-family: Georgia;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+
+}
+.Tag-quote:before {
+	color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+.Tag-button {
+	border: 1px solid #cceef0;
+	cursor: pointer;
+	border-radius: 30px;
+	width: 100px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 4px 10px;
+	color: #23bbce;
+}
+.Tag-button:hover {
+	background: #cceef0;
+	transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
